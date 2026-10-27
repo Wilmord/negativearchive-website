@@ -1,0 +1,47 @@
+:root {
+  color-scheme: light;
+  --paper: #f7f4ed;
+  --ink: #28251f;
+  --muted: #625b50;
+  --accent: #85470f;
+  --line: #d9d2c4;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+  font-synthesis: none;
+  -webkit-text-size-adjust: 100%;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-size: 1.0625rem; line-height: 1.75; }
+a { color: var(--accent); text-underline-offset: .22em; overflow-wrap: anywhere; }
+a:hover { text-decoration-thickness: .13em; }
+a:focus-visible { outline: 3px solid var(--accent); outline-offset: 5px; border-radius: 2px; }
+.site-header, .site-footer { max-width: 72rem; margin: auto; padding: 1.5rem 2rem; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; }
+.site-header { border-bottom: 1px solid var(--line); }
+.brand { display: flex; align-items: center; gap: .8rem; text-decoration: none; color: var(--ink); font-size: 1.1rem; font-weight: 650; letter-spacing: -.025em; }
+.brand img { width: 48px; height: 48px; border-radius: 11px; }
+nav { display: flex; gap: 1.25rem; }
+nav a { min-height: 44px; display: inline-flex; align-items: center; color: var(--muted); text-decoration: none; }
+nav a[aria-current] { color: var(--ink); text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 2px; text-underline-offset: .5em; }
+main { max-width: 48rem; margin: 4rem auto 5rem; padding: 0 2rem; outline: none; }
+.eyebrow { font-size: .75rem; font-weight: 650; text-transform: uppercase; letter-spacing: .14em; color: var(--accent); margin: 0 0 1rem; }
+h1 { font-family: Georgia, "Times New Roman", serif; font-size: clamp(2.3rem, 6vw, 3.8rem); line-height: 1.08; font-weight: 500; letter-spacing: -.045em; margin: 0 0 1.8rem; }
+h2 { font-size: 1.3rem; line-height: 1.4; letter-spacing: -.025em; margin: 2.6rem 0 .7rem; }
+p { margin: 0 0 1.25rem; }
+strong { font-weight: 650; }
+.draft-note { border-left: 3px solid var(--accent); padding: .8rem 1rem; margin-bottom: 1.75rem; background: #ede5d6; font-size: .9rem; color: #514432; }
+.site-footer { border-top: 1px solid var(--line); font-size: .875rem; color: var(--muted); flex-wrap: wrap; }
+.skip-link { position: absolute; top: -10rem; left: 1rem; background: var(--paper); padding: .75rem 1rem; z-index: 1; }
+.skip-link:focus { top: 1rem; }
+@media (max-width: 540px) {
+  .site-header { align-items: flex-start; flex-direction: column; gap: .5rem; }
+  .site-header, .site-footer { padding: 1rem 1.25rem; }
+  main { margin: 2.5rem auto 3rem; padding: 0 1.25rem; }
+  h1 { max-width: 12ch; }
+  nav { gap: 1.5rem; }
+}
+@media print {
+  .site-header, .site-footer, .skip-link { display: none; }
+  main { max-width: none; margin: 0; padding: 0; }
+  :root { background: white; color: black; }
+}
